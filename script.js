@@ -3,6 +3,8 @@ const noBtn = document.querySelector(".no-btn");
 const question = document.querySelector(".question");
 const gif = document.querySelector(".gif");
 
+let firstHover = true; // Track if the No button was hovered before
+
 // Change text and gif when the Yes button is clicked
 yesBtn.addEventListener("click", () => {
     question.innerHTML = "Being with you is my biggest blessing. I love you.";
@@ -12,8 +14,15 @@ yesBtn.addEventListener("click", () => {
     noBtn.style.display = "none";
 });
 
-// Make the No button move randomly on hover
+// Make the No button move randomly after the first hover
 noBtn.addEventListener("mouseover", () => {
+    if (firstHover) {
+        firstHover = false; // Now it can move
+
+        // Set position: absolute to allow movement
+        noBtn.style.position = "absolute";
+    }
+
     const wrapper = document.querySelector(".wrapper");
     const wrapperRect = wrapper.getBoundingClientRect();
     const noBtnRect = noBtn.getBoundingClientRect();
@@ -26,6 +35,6 @@ noBtn.addEventListener("mouseover", () => {
     const randomX = Math.min(Math.floor(Math.random() * maxX), maxX);
     const randomY = Math.min(Math.floor(Math.random() * maxY), maxY);
 
-    noBtn.style.left = randomX + "px";
-    noBtn.style.top = randomY + "px";
+    noBtn.style.left = `${randomX}px`;
+    noBtn.style.top = `${randomY}px`;
 });
