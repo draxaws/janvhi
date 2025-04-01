@@ -1,4 +1,3 @@
-/* style.css */
 body {
     margin: 0;
     padding: 0;
@@ -40,17 +39,13 @@ body {
 .btn-group {
     display: flex;
     justify-content: center;
-    gap: 20px; /* Ensures buttons are spaced apart */
+    gap: 20px; /* Space between buttons */
     position: relative; /* Keeps everything in place */
 }
 
 .yes-btn, .no-btn {
-    position: relative; /* Keeps buttons in normal flow */
+    position: relative; /* Keeps buttons in normal flow initially */
 }
-
-
-
-
 
 button {
     padding: 12px 30px;
@@ -81,7 +76,6 @@ button:focus {
     background-color: #ff4d4d;
     color: white;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    position: static; /* Remove absolute positioning */
 }
 
 .no-btn:hover {
