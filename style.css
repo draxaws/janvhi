@@ -39,9 +39,12 @@ body {
 
 .btn-group {
     display: flex;
-    justify-content: space-around;
-    gap: 15px;
+    justify-content: center;
+    gap: 15px; /* Adds space between buttons */
 }
+
+
+
 
 button {
     padding: 12px 30px;
@@ -69,10 +72,10 @@ button:focus {
 }
 
 .no-btn {
-    position: absolute;
     background-color: #ff4d4d;
     color: white;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: static; /* Remove absolute positioning */
 }
 
 .no-btn:hover {
