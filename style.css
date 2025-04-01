@@ -40,8 +40,14 @@ body {
 .btn-group {
     display: flex;
     justify-content: center;
-    gap: 15px; /* Adds space between buttons */
+    gap: 20px; /* Ensures buttons are spaced apart */
+    position: relative; /* Keeps everything in place */
 }
+
+.yes-btn, .no-btn {
+    position: relative; /* Keeps buttons in normal flow */
+}
+
 
 
 
